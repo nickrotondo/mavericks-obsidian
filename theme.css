@@ -4,44 +4,95 @@ body {
   --accent-s: 60%;
   --accent-l: 55%;
 
+  /* Title Bar */
   --titlebar-background: var(--background-primary);
-  --titlebar-background-focused: var(--background-secondary);
+  --titlebar-background-focused: var(--background-secondary-alt);
+
+  /* Checkboxes */
+  --checklist-done-decoration: none;
+  --checklist-done-color: var(--text-muted);
+
+  /* Text */
+  --text-normal: var(--color-base-100);
+  --text-muted: var(--color-base-70);
+  --text-faint: var(--color-base-50);
+  --text-on-accent: white;
+  --text-on-accent-inverted: black;
+  --text-error: var(--color-red);
+  --text-warning: var(--color-orange);
+  --text-success: var(--color-green);
+  --text-selection: hsla(var(--color-accent-hsl), 0.2);
+  --text-highlight-bg-rgb: 255, 208, 0;
+  --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.4);
+  --text-accent: var(--color-accent);
+  --text-accent-hover: var(--color-accent-2);
+  --interactive-normal: var(--color-base-00);
+  --interactive-hover: var(--color-base-10);
+  --interactive-accent-hsl: var(--color-accent-hsl);
+  --interactive-accent: var(--color-accent-1);
+  --interactive-accent-hover: var(--color-accent-2);
+
+  /* Code */
+  --code-white-space: pre-wrap;
+  --code-radius: var(--radius-s);
+  --code-size: var(--font-smaller);
+  --code-background: var(--background-primary-alt);
+  --code-normal: var(--color-green);
+  --code-comment: var(--text-faint);
+  --code-function: var(--color-green);
+  --code-important: var(--color-orange);
+  --code-keyword: var(--color-blue);
+  --code-operator: var(--color-pink);
+  --code-property: var(--color-cyan);
+  --code-punctuation: var(--text-normal);
+  --code-string: var(--color-yellow);
+  --code-tag: var(--color-pink);
+  --code-value: var(--color-purple);
+}
+
+/* Code */
+.cm-type {
+  color: var(--color-purple);
+}
+
+.cm-attribute {
+  color: var(--code-function);
 }
 
 .theme-dark {
-  --color-red-rgb: 228, 130, 129;
-  --color-red: #e48281;
+  --color-red-rgb: 230, 78, 76;
+  --color-red: #e64e4c;
   --color-orange-rgb: 228, 156, 129;
   --color-orange: #e49c81;
   --color-yellow-rgb: 228, 205, 129;
   --color-yellow: #e4cd81;
-  --color-green-rgb: 168, 227, 150;
-  --color-green: #a8e396;
-  --color-cyan-rgb: 129, 226, 228;
-  --color-cyan: #81e2e4;
-  --color-blue-rgb: 129, 202, 228;
-  --color-blue: #81cae4;
-  --color-purple-rgb: 171, 150, 227;
-  --color-purple: #ab96e3;
-  --color-pink-rgb: 227, 150, 207;
-  --color-pink: #e396cf;
+  --color-green-rgb: 152, 228, 129;
+  --color-green: #98e481;
+  --color-cyan-rgb: 129, 228, 205;
+  --color-cyan: #81e4cd;
+  --color-blue-rgb: 112, 203, 235;
+  --color-blue: #70cbeb;
+  --color-purple-rgb: 156, 129, 228;
+  --color-purple: #9c81e4;
+  --color-pink-rgb: 228, 129, 202;
+  --color-pink: #e481ca;
   --color-base-00: #090f11;
-  --color-base-05: #0b1114;
+  --color-base-05: #0e1619;
   --color-base-10: #121d21;
   --color-base-20: #172b32;
-  --color-base-25: #2a2a2a;
-  --color-base-30: #363636;
-  --color-base-35: #3f3f3f;
-  --color-base-40: #555555;
-  --color-base-50: #666666;
-  --color-base-60: #999999;
-  --color-base-70: #b3b3b3;
-  --color-base-100: #dadada;
+  --color-base-25: #253940;
+  --color-base-30: #33464d;
+  --color-base-35: #40575d;
+  --color-base-40: #4d6871;
+  --color-base-50: #5a7a86;
+  --color-base-60: #7796a1;
+  --color-base-70: #a2c5d2;
+  --color-base-100: #e9f6fb;
 
   --background-primary: var(--color-base-20);
   --background-primary-alt: var(--color-base-10);
-  --background-secondary: var(--color-base-10);
-  --background-secondary-alt: var(--color-base-05);
+  --background-secondary: var(--color-base-05);
+  --background-secondary-alt: var(--color-base-00);
 
   --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
@@ -59,4 +110,106 @@ body {
 
 .workspace-tab-header.mod-active {
   border-top: 1px solid var(--color-accent);
+}
+
+.theme-light .token.comment .theme-light .cm-comment {
+  color: #ababab;
+}
+.theme-dark .token.comment,
+.theme-dark .cm-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--code-comment);
+}
+.token.punctuation,
+.token.plain-text,
+.token.dom.variable,
+.cm-hmd-codeblock.cm-bracket {
+  color: var(--text-muted);
+}
+.cm-hmd-codeblock {
+  color: var(--text-muted);
+}
+.cm-meta {
+  color: var(--color-green);
+}
+code[class*="language-"],
+.token.selector,
+.cm-tag,
+.token.dom.variable,
+.token.tag,
+.cm-def,
+.token.parameter,
+.cm-qualifier {
+  color: var(--color-green);
+}
+.cm-property {
+  color: var(--color-blue);
+}
+.token.class-name,
+.token.maybe-class-name,
+.token.property-access,
+.token.constant,
+.token.builtin,
+.cm-variable-2,
+.cm-type,
+.cm-atom,
+code .cm-tag {
+  color: var(--color-purple);
+}
+.token.property,
+.token.boolean,
+.token.number,
+.token.symbol,
+.token.attr-name,
+.token.deleted,
+.cm-attribute,
+.cm-number,
+.cm-property.cm-string {
+  color: var(--color-orange);
+}
+.cm-hmd-codeblock.cm-string {
+  color: var(--color-yellow);
+}
+.token.string,
+.token.char,
+.token.attr-value,
+.token.inserted,
+.cm-hmd-codeblock.cm-string-2 {
+  color: var(--color-green);
+}
+.token.operator,
+.cm-operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--color-pink);
+}
+.token.atrule,
+.token.keyword,
+.cm-keyword {
+  color: var(--color-pink);
+}
+.cm-variable,
+.token.function,
+.token.method,
+.token.macro.property {
+  color: var(--color-blue);
+}
+.token.regex,
+.token.important,
+.token.variable {
+  color: var(--color-purple);
+}
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
 }
