@@ -200,8 +200,11 @@ li.is-collapsed .list-bullet:after,
 
 .callout-title {
   overflow-x: auto;
-  margin-bottom: 1rem;
   background-color: var(--callout-content-background);
+}
+
+.callout-title:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 /* Code */
