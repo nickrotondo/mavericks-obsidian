@@ -1103,7 +1103,7 @@ body {
   --callout-title-color: inherit;
   --callout-title-padding: 0;
   --callout-title-size: inherit;
-  --callout-title-weight: calc(var(--font-weight) + var(--bold-modifier));
+  --callout-title-weight: var(--bold-weight);
   --callout-content-padding: 0;
   --callout-content-background: transparent;
   --callout-bug: var(--color-red-rgb);
@@ -1614,7 +1614,7 @@ body {
   --table-header-border-color: var(--table-border-color);
   --table-header-font: inherit;
   --table-header-size: var(--table-text-size);
-  --table-header-weight: calc(var(--font-weight) + var(--bold-modifier));
+  --table-header-weight: var(--bold-weight);
   --table-header-color: var(--text-normal);
   --table-line-height: var(--line-height-tight);
   --table-text-size: var(--font-text-size);
@@ -9011,7 +9011,7 @@ code[class*="language-"] {
   display: flex;
   gap: var(--size-4-1);
   font-size: var(--font-text-size);
-  font-weight: calc(var(--font-weight) + var(--bold-modifier));
+  font-weight: var(--bold-weight);
   text-align: start;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -11010,12 +11010,12 @@ ul > li.task-list-item[data-task="X"] {
 }
 b,
 strong {
-  font-weight: calc(var(--font-weight) + var(--bold-modifier));
+  font-weight: var(--bold-weight);
   color: var(--bold-color);
 }
 b a,
 strong a {
-  font-weight: calc(var(--link-weight) + var(--bold-modifier));
+  font-weight: var(--bold-weight);
 }
 i,
 em {
@@ -11043,11 +11043,11 @@ em {
   color: var(--text-normal);
 }
 .cm-strong {
-  font-weight: calc(var(--font-weight) + var(--bold-modifier));
+  font-weight: var(--bold-weight);
   color: var(--bold-color);
 }
 .cm-strong a {
-  font-weight: calc(var(--link-weight) + var(--bold-modifier));
+  font-weight: var(--bold-weight);
 }
 .cm-em {
   font-style: italic;
@@ -11055,7 +11055,7 @@ em {
   font-weight: var(--italic-weight);
 }
 .cm-strong.cm-em {
-  font-weight: calc(var(--font-weight) + var(--bold-modifier));
+  font-weight: var(--bold-weight);
 }
 .cm-s-obsidian span.cm-error {
   color: var(--text-error);
@@ -15404,7 +15404,7 @@ body.is-tablet .sidebar-toggle-button.mod-left {
 }
 .is-mobile button.mod-warning {
   background-color: var(--interactive-normal);
-  font-weight: calc(var(--font-weight) + var(--bold-modifier));
+  font-weight: var(--bold-weight);
   color: var(--text-error);
 }
 .is-phone .modal,
