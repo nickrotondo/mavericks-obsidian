@@ -281,6 +281,10 @@ li.is-collapsed .list-bullet:after,
   box-shadow: none;
 }
 
+.callout {
+  margin-bottom: 1.5rem;
+}
+
 .callout-title {
   overflow-x: auto;
   background-color: var(--callout-content-background);
@@ -412,4 +416,15 @@ code .cm-tag {
 }
 .token.entity {
   cursor: help;
+}
+.markdown-preview-view h1 {
+  margin-bottom: 2rem;
+}
+.markdown-preview-view h2 {
+  margin-bottom: 1.5rem;
+}
+.markdown-preview-view h3,
+.markdown-preview-view p,
+.markdown-preview-view ul {
+  margin-bottom: 1.25rem;
 }
